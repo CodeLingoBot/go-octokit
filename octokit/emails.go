@@ -25,7 +25,7 @@ type EmailsService struct {
 	URL    *url.URL
 }
 
-// Get a list of email addresses for the current user
+// All gets a list of email addresses for the current user
 //
 // https://developer.github.com/v3/users/emails/#list-email-addresses-for-a-user
 func (e *EmailsService) All() (emails []Email, result *Result) {
@@ -33,7 +33,7 @@ func (e *EmailsService) All() (emails []Email, result *Result) {
 	return
 }
 
-// Adds a list of email address(es) for the current user
+// Create adds a list of email address(es) for the current user
 //
 // https://developer.github.com/v3/users/emails/#add-email-addresses
 func (e *EmailsService) Create(params interface{}) (emails []Email, result *Result) {

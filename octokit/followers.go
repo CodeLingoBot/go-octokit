@@ -23,7 +23,7 @@ type FollowersService struct {
 	client *Client
 }
 
-// Get a list of followers for the user
+// All gets a list of followers for the user
 //
 // https://developer.github.com/v3/users/followers/#list-followers-of-a-user
 func (f *FollowersService) All(uri *Hyperlink, uriParams M) (followers []User, result *Result) {
@@ -36,7 +36,7 @@ func (f *FollowersService) All(uri *Hyperlink, uriParams M) (followers []User, r
 	return
 }
 
-// Checks if you are following a target user
+// Check checks if you are following a target user
 //
 // https://developer.github.com/v3/users/followers/#check-if-you-are-following-a-user
 func (f *FollowersService) Check(uri *Hyperlink, uriParams M) (success bool, result *Result) {

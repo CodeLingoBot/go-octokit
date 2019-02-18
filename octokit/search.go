@@ -22,7 +22,7 @@ type SearchService struct {
 	client *Client
 }
 
-// Get the user search results based on SearchService#URL
+// Users gets the user search results based on SearchService#URL
 //
 // https://developer.github.com/v3/search/#search-users
 func (g *SearchService) Users(uri *Hyperlink, uriParams M) (userSearchResults *UserSearchResults, result *Result) {
@@ -35,7 +35,7 @@ func (g *SearchService) Users(uri *Hyperlink, uriParams M) (userSearchResults *U
 	return
 }
 
-// Get the issue search results based on SearchService#URL
+// Issues gets the issue search results based on SearchService#URL
 //
 // https://developer.github.com/v3/search/#search-issues
 func (g *SearchService) Issues(uri *Hyperlink, uriParams M) (issueSearchResults *IssueSearchResults, result *Result) {
@@ -48,7 +48,7 @@ func (g *SearchService) Issues(uri *Hyperlink, uriParams M) (issueSearchResults 
 	return
 }
 
-// Get the repository search results based on SearchService#URL
+// Repositories gets the repository search results based on SearchService#URL
 //
 // https://developer.github.com/v3/search/#search-repositories
 func (g *SearchService) Repositories(uri *Hyperlink, uriParams M) (repositorySearchResults *RepositorySearchResults, result *Result) {
@@ -61,7 +61,7 @@ func (g *SearchService) Repositories(uri *Hyperlink, uriParams M) (repositorySea
 	return
 }
 
-// Get the code search results based on SearchService#URL
+// Code gets the code search results based on SearchService#URL
 //
 // https://developer.github.com/v3/search/#search-code
 func (g *SearchService) Code(uri *Hyperlink, uriParams M) (codeSearchResults *CodeSearchResults, result *Result) {

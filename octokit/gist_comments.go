@@ -19,7 +19,7 @@ type GistCommentsService struct {
 	client *Client
 }
 
-// Get a list of all gist comments
+// All gets a list of all gist comments
 //
 // https://developer.github.com/v3/gists/comments/#list-comments-on-a-gist
 func (c *GistCommentsService) All(uri *Hyperlink, uriParams M) (comments []GistComment, result *Result) {
@@ -32,7 +32,7 @@ func (c *GistCommentsService) All(uri *Hyperlink, uriParams M) (comments []GistC
 	return
 }
 
-// Get a single comment by id
+// One gets a single comment by id
 //
 // https://developer.github.com/v3/gists/comments/#get-a-single-comment
 func (c *GistCommentsService) One(uri *Hyperlink, uriParams M) (comment *GistComment, result *Result) {

@@ -24,7 +24,7 @@ type OrganizationService struct {
 	client *Client
 }
 
-// Get the specified organization's information
+// OrganizationGet gets the specified organization's information
 //
 // https://developer.github.com/v3/orgs/#get-an-organization
 func (g *OrganizationService) OrganizationGet(uri *Hyperlink, params M) (
@@ -57,7 +57,7 @@ func (g *OrganizationService) OrganizationUpdate(uri *Hyperlink,
 	return
 }
 
-// Get the list of repository information of an organization
+// OrganizationRepos gets the list of repository information of an organization
 //
 // https://developer.github.com/v3/repos/#list-organization-repositories
 func (g *OrganizationService) OrganizationRepos(uri *Hyperlink, params M) (
@@ -73,7 +73,7 @@ func (g *OrganizationService) OrganizationRepos(uri *Hyperlink, params M) (
 	return
 }
 
-// Get information for the list of organizations the current user belongs to
+// YourOrganizations gets information for the list of organizations the current user belongs to
 //
 // https://developer.github.com/v3/orgs/#list-your-organizations
 func (g *OrganizationService) YourOrganizations(uri *Hyperlink, params M) (
@@ -89,7 +89,7 @@ func (g *OrganizationService) YourOrganizations(uri *Hyperlink, params M) (
 	return
 }
 
-// Get the information for the list of organizations the specified user belongs to
+// UserOrganizations gets the information for the list of organizations the specified user belongs to
 //
 // https://developer.github.com/v3/orgs/#list-user-organizations
 func (g *OrganizationService) UserOrganizations(uri *Hyperlink, params M) (

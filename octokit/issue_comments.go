@@ -19,7 +19,7 @@ type IssueCommentsService struct {
 	client *Client
 }
 
-// Get a list of all issue comments
+// All gets a list of all issue comments
 //
 // https://developer.github.com/v3/issues/comments/#list-comments-on-an-issue
 func (c *IssueCommentsService) All(uri *Hyperlink, uriParams M) (comments []IssueComment, result *Result) {
@@ -32,7 +32,7 @@ func (c *IssueCommentsService) All(uri *Hyperlink, uriParams M) (comments []Issu
 	return
 }
 
-// Get a single comment by id
+// One gets a single comment by id
 //
 // https://developer.github.com/v3/issues/comments/#get-a-single-comment
 func (c *IssueCommentsService) One(uri *Hyperlink, uriParams M) (comment *IssueComment, result *Result) {

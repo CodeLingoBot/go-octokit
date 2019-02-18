@@ -16,7 +16,7 @@ type IssueLabelsService struct {
 	client *Client
 }
 
-// Adds labels to an issue
+// Add adds labels to an issue
 //
 // https://developer.github.com/v3/issues/labels/#add-labels-to-an-issue
 func (l *IssueLabelsService) Add(uri *Hyperlink, uriParams M, labelsToAdd []string) (labels []Label, result *Result) {
@@ -42,7 +42,7 @@ func (l *IssueLabelsService) All(uri *Hyperlink, uriParams M) (labels []Label, r
 	return
 }
 
-// Removes a label from an issue
+// Remove removes a label from an issue
 //
 // https://developer.github.com/v3/issues/labels/#remove-a-label-from-an-issue
 func (l *IssueLabelsService) Remove(uri *Hyperlink, uriParams M) (success bool, result *Result) {
@@ -57,7 +57,7 @@ func (l *IssueLabelsService) Remove(uri *Hyperlink, uriParams M) (success bool, 
 	return
 }
 
-// Removes all labels from an issue
+// RemoveAll removes all labels from an issue
 //
 // https://developer.github.com/v3/issues/labels/#remove-all-labels-from-an-issue
 func (l *IssueLabelsService) RemoveAll(uri *Hyperlink, uriParams M) (success bool, result *Result) {
@@ -72,7 +72,7 @@ func (l *IssueLabelsService) RemoveAll(uri *Hyperlink, uriParams M) (success boo
 	return
 }
 
-// Replace all labels for an issue
+// ReplaceAll replaces all labels for an issue
 //
 // https://developer.github.com/v3/issues/labels/#replace-all-labels-for-an-issue
 func (l *IssueLabelsService) ReplaceAll(uri *Hyperlink, uriParams M, newLabels []string) (labels []Label, result *Result) {

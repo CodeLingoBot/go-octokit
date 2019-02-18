@@ -22,7 +22,7 @@ type PublicKeysService struct {
 	client *Client
 }
 
-// Get a list of keys for the user
+// All gets a list of keys for the user
 //
 // https://developer.github.com/v3/repos/keys/#list-deploy-keys
 func (k *PublicKeysService) All(uri *Hyperlink, uriParams M) (keys []Key, result *Result) {
@@ -35,7 +35,7 @@ func (k *PublicKeysService) All(uri *Hyperlink, uriParams M) (keys []Key, result
 	return
 }
 
-// Get a the data for one key for the current user
+// One gets a the data for one key for the current user
 //
 // https://developer.github.com/v3/repos/keys/#get-a-deploy-key
 func (k *PublicKeysService) One(uri *Hyperlink, uriParams M) (key *Key, result *Result) {
@@ -61,7 +61,7 @@ func (k *PublicKeysService) Create(uri *Hyperlink, uriParams M, requestParams in
 	return
 }
 
-// Removes a public key for the current user
+// Delete removes a public key for the current user
 //
 // https://developer.github.com/v3/repos/keys/#remove-a-deploy-key
 func (k *PublicKeysService) Delete(uri *Hyperlink, uriParams M) (success bool, result *Result) {
